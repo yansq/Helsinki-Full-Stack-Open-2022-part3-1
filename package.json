@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf build && cd ../Helsinki-Full-Stack-Open-2022/part2 && npm run build && cp -r build ../../Helsinki-Full-Stack-Open-2022-part3-1",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "author": "yansq",
   "license": "ISC",
